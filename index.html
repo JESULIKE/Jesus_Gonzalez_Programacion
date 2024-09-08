@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("img/Fondo.jpg");
+    }
+
+    .arbol {
+      padding-top: 130px;
+      margin-left: -25%;
+    }
+
+    .suma {
+      display: flex;
+      align-items: center;
+      margin-top: 150%;
+      margin-left: 50%;
+    }
+
+    .form-control {
+      margin-top: 5%;
+      margin-left: 10%;
+    }
+
+    .col-1 {
+      display: flex;
+      align-items: center;
+      margin-left: 45%;
+      margin-top: -10%;
+    }
+
+    .audio-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .audio {
+      width: 200px;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="audio-container">
+    <audio id="myAudio" controls class="audio">
+      <source src="music/Theme.mp3" type="audio/mpeg">
+      El audio no se puedo reproducir
+    </audio>
+   </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+  <div id="app" class="container">
+
+    <div class="row">
+
+      <div class="col-4">
+        <div>
+          <input @input="validar('a')" type="number" class="form-control" v-model.number="n1"></input>
+        </div>
+
+        <div class="arbol">
+          <img :src="arboles[n1]" width="700px">
+        </div>
+      </div>
+
+      <div class="col-3">
+        <img class="suma" src="./img/suma.png" width="100px" height="100px">
+      </div>
+
+      <div class="col-4">
+        <div>
+          <input @input="validar('b')" type="number" class="form-control" v-model.number="n2"></input>
+        </div>
+
+        <div class="arbol">
+          <img :src="arboles[n2]" width="700px">
+        </div>
+      </div>
+      
+      <div class="col-1">
+        <input type="number" v-model.number="respuesta" class="form-control">
+      </div>
+
+      <button @click="resultado()" class="btn btn-light">VALIDAR</button>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const { createApp } = Vue
+
+    createApp(
+      {
+        data() {
+          return {
+            arboles: [
+              "./img/CERO.png",
+              "./img/UNO.png",
+              "./img/DOS.png",
+              "./img/TRES.png",
+              "./img/CUATRO.png",
+              "./img/CINCO.png",
+              "./img/SEIS.png",
+              "./img/SIETE.png",
+              "./img/OCHO.png",
+              "./img/NUEVE.png",
+              "./img/DIEZ.png"
+            ],
+            n1: 0,
+            n2: 0,
+            respuesta: 0
+          }
+        },
+        methods: {
+          validar(v) {
+            if (v == 'a') {
+              if (this.n1 > 10)
+                this.n1 = 10
+            }
+            else {
+              if (this.n2 > 10)
+                this.n2 = 10
+            }
+            if (v == 'a') {
+              if (this.n1 < 1)
+                this.n1 = 0
+            }
+            else {
+              if (this.n2 < 1)
+                this.n2 = 0
+            }
+          },
+
+          resultado() {
+            if ((this.n1 + this.n2) == this.respuesta)
+              alert('CORRECTO')
+            else
+              alert('INCORRECTO')
+
+          }
+        }
+      }
+    ).mount('#app')
+  </script>
+
+
+</body>
+
+</html>
