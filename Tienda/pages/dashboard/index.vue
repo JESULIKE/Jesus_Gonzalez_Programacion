@@ -4,28 +4,28 @@
         <manager
           @compra="compra">
         </manager>
-      </NuxtLayout> 
+      </NuxtLayout>
     </div>
 </template>
 <script>
 
 
 export default {
-   layout: 'default', 
- 
+   layout: 'default',
+
     data() {
         return {
-         
-         
-                    
-           
+
+
+
+
         }
     },
-   
+
     methods: {
       compra(data){
          this.comprasrealizadas.push(data)
-        
+
       }
     },
 }

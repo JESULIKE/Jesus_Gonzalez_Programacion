@@ -3,17 +3,17 @@
     <div class="hero-section">
       <img src="https://pcgamermexico.com/stupload/stswiper/pcgamerbanner-scaled.png" alt="Imagen de fondo de la tienda de juegos de mesa" class="hero-image">
       <div class="hero-content">
-        <h1 class="hero-title">Bienvenidos a Tu Tienda de Juegos de Mesa</h1>
-        <p class="hero-text">Explora juegos increíbles para todas las edades y gustos. ¡Diversión garantizada para compartir con familia y amigos!</p>
+        <h1 class="hero-title">Bienvenidos a Tu Tienda de Pc Componentes</h1>
+        <p class="hero-text">Explora productos increíbles para todos los presupuestos y gustos. ¡Calidad garantizada!</p>
         <NuxtLink to="/dashboard/">
-          <v-btn color="warning" large>Descubre nuestros juegos</v-btn>
+          <v-btn color="warning" large>Descubre nuestros productos</v-btn>
         </NuxtLink>
       </div>
     </div>
 
     <div class="counter-section">
       <h2>Hemos recibido {{ this.$store.state.count }} visitas</h2>
-      <p class="counter-text">¡Gracias por ser parte de nuestra comunidad de amantes de los juegos de mesa!</p>
+      <p class="counter-text">¡Gracias por ser parte de nuestra comunidad gamer!</p>
     </div>
   </div>
 </template>

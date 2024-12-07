@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-5">
+    <div class="mt-5 ml-5 mr-5">
         <v-row>
             <v-col v-for="data in this.$store.getters.productos" :key="data.url" cols="3">
                <producto
