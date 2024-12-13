@@ -50,10 +50,10 @@
               <li>Royner Díaz</li>
             </ul><br>
 
-            <h2>Agradecimiento Especiale</h2>
+            <h2>Agradecimiento Especial</h2>
             <p>
               Agradecemos a la profesora <strong>Yuli Ney</strong> por brindarnos el tema a desarollar en este ova y
-              estar al tanto del ova realizado
+              estar al tanto de lo realizado.
             </p>
 
           </div>
